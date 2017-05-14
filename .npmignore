@@ -1,0 +1,10 @@
+.idea/
+.babelrc
+.eslintrc
+node_modules
+npm-debug.log
+scripts/
+webpack.config.js
+src/__tests__/
+jsdomSetup.js
+.sass-cache/

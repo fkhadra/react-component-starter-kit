@@ -1,0 +1,62 @@
+{
+  "name": "LIB_NAME",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "react",
+    "react-component"
+  ],
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "jest --verbose",
+    "lint": "eslint src/",
+    "lint:fix": "eslint --fix src/",
+    "prebuild": "npm run lint && npm run test",
+    "build": "NODE_ENV=production ./scripts/build.sh",
+    "postbuild": "npm run style",
+    "prestyle": "sass src/scss/main.scss dist/LIB_NAME.css",
+    "style": "postcss --use autoprefixer -b 'last 2 versions' < dist/LIB_NAME.css | postcss --use cssnano > dist/LIB_NAME.min.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fkhadra/REPO_NAME.git"
+  },
+  "author": "Fadi Khadra  <fdkhadra@gmail.com> (https://fkhadra.github.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fkhadra/REPO_NAME/issues"
+  },
+  "homepage": "https://github.com/fkhadra/REPO_NAME#readme",
+  "dependencies": {
+
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.5.2",
+    "babel-cli": "^6.11.4",
+    "babel-eslint": "^7.2.3",
+    "babel-jest": "^20.0.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.4.0",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-0": "^6.5.0",
+    "cssnano": "^3.8.0",
+    "enzyme": "^2.8.2",
+    "eslint": "^3.2.2",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.0.0",
+    "jest": "^20.0.1",
+    "postcss": "^5.2.5",
+    "postcss-cli": "^3.2.0",
+    "react": "^15.5.4",
+    "react-addons-test-utils": "^15.3.0",
+    "react-dom": "^15.5.4",
+    "react-test-renderer": "^15.5.4",
+    "webpack": "^2.4.1"
+  },
+  "peerDependencies": {
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  }
+}
